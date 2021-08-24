@@ -10,14 +10,16 @@
           background-color: rgb(197, 186, 82);
           margin-bottom: 200px;
    animation-name: cuerpo;
-   animation-duration: 2s;
+   animation-duration: 20s;
    animation-iteration-count:infinite;
    animation-direction: alternate; 
 }
 @keyframes cuerpo { 
-    0% {background:rgb(62, 96, 124);}
-    100% {background:rgb(126, 109, 26);}} 
+    0% {background:rgb(76, 112, 148);}
+    50% {background:rgb(100, 153, 47);}
+    100% {background:rgb(134, 64, 64);}} 
 
+    .img{border: solid rgb(160, 10, 10) 10px;}
 
 .btn {background-color: rgb(41, 106, 122);
     position: relative;
@@ -45,20 +47,30 @@
       /* width: 450px; */
     }
 #btn {background-color: rgb(41, 106, 122);
-    position: relative;
-      margin-top: 3%;
-      height: 80px;
-      width: 800px;
-      border: solid black 3px;
-      box-shadow: rgb(56, 55, 55) 3px 3px 40px;
-      cursor: pointer;
-      color: rgb(0, 0, 0);
+  position: relative;
+    margin-top: 3%;
+    height: 80px;
+    width: 800px;
+    border: solid black 3px;
+    box-shadow: rgb(56, 55, 55) 3px 3px 40px;
+    cursor: pointer;
+     transition: ease-out 3s; 
+    color: rgb(0, 0, 0);
+    /* animation-name: btna; 
+    animation-duration: 2s; 
+    animation-iteration-count:infinite;
+    animation-direction: alternate; */
+    transition: all 0.3s;
+    /* transition: width 3s; */
 }
 
 #btn:hover{background-color: rgb(21, 99, 119);
-    border-radius: 0% 10% 0% 20%;
-    box-shadow: rgb(206, 186, 186) 3px 3px 50px;
-    color: rgb(184, 184, 184);
+  /* transition: all 0.3s; */
+  border-radius: 0% 10% 0% 20%;
+  box-shadow: rgb(206, 186, 186) 3px 3px 70px;
+  text-shadow: black 1px 1px 10px;
+  color: white;
+  /* width: 450px; */;
 
   }
 

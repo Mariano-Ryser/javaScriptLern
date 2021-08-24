@@ -15,20 +15,24 @@
     <img class='plant' src="/IMG/plant.png" alt="">
 <br><br><br>
 
-<h1> onclick="myDate()" Click me </h1>
+<h1> Button mit onclick Function </h1>
 <br>
+
+<img class= "img" src="/IMG/EJS1.png" alt="">
 
 <button id ='btn' onclick="myDate()">Click me</button>
 
-<br><br><br><br>
-<p id="date"> p mit id = "date" </p>
-
-
-
+<br><br><br>
+<div style="border: solid black 4px; display: inline-block; padding: 8px; background-color: brown;">
+<p id="date"> Parrafo </p>
+</div>
 <script>
      function myDate() {
     document.getElementById('date').innerHTML= Date();
-  };
+    document.getElementById('btn').innerHTML="YESS"
+  }
 </script>
+
+
 </body>
 </html>
