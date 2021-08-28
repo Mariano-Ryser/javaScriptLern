@@ -7,25 +7,198 @@
     <script src="/js.js"></script>
     <link rel="stylesheet" href="/Style.css">
     
-    <title>Document</title>
+    <link rel="shortcut icon" href="/IMG/JSicon.png">
+    <title>Java-Script</title>
     
 </head>
 
 <body>
-    <img class='plant' src="/IMG/plant.png" alt="">
+  <body>
+    <div class="header">
+     <a href="index.html"><img  id='logo' src="/IMG/javacorn.png" alt=""> </a> 
+     
+    </div>
+   
+<br><br><br>
+<!--///////////////////////////////////1er EJERCICIO/////////////////////////////////////// -->
+<h1> Button mit onclick Function </h1>
+<br>
+<div>
+<img class= "img" src="/IMG/EJE1.png" alt="">
+<div class="resultado"><p id="result-text-1" class="result-text">&nbsp;</p></div>
+</div>
+<br>
 
-<br><br><br><br>
-  <h1> Onclick mathematical result </h1>
-<br><br>
-<img class='img'src="/IMG/EJS2.png" alt="">
+<div>
+  <button class = 'btn' onclick="S_templateStrings1();">Run</button>
+  <button class = 'btn' onclick="clearResultText(1);">Clear</button>
+  <br><br>
 
-<button id ='btn' onclick="getElementById('date').innerHTML= (7+6);">Click me</button>
-
-<div style="border: solid black 4px; display: inline-block;">
-<p id="date">id = 'date'</p>
+  <div class="resultado"><p id="result-text-1" class="result-text">&nbsp;</p></div>
 </div>
 
+<script>
+function S_templateStrings1() {
 
-<script></script>
+    let firstName = "Petra";
+    let lastName = "Grimes";
+    
+    let intro = `Let's introduce ${firstName} ${lastName} "officially"!`;
+
+    console.log(intro);  
+   
+    setInnerHTML("#result-text-1", intro);
+}
+
+function setInnerHTML(selector, text) {
+    let elem = document.body.querySelector(selector);
+    if (elem) elem.innerHTML = text;
+}
+
+function clearResultText(n) {
+    setInnerHTML("#result-text-" + n, '&nbsp;');
+}
+</script>
+
+<br><br>
+<HR></HR>
+<br><br>
+
+<!--///////////////////////////////////2do EJERCICIO/////////////////////////////////////// -->
+
+
+<br>
+  <h1> Onclick mathematical result </h1>
+<br><br>
+<img class='img'src="/IMG/EJE2.png" alt="">
+<br>
+<button id ='btn' onclick="getElementById('date').innerHTML= (7+6);">Click me</button>
+<br><br>
+<div display: inline-block;>
+  
+<p id="date">id = 'date'</p>
+<br><br>
+</div>
+
+<br><br><hr><br><br>
+<!--///////////////////////////////////3er EJERCICIO/////////////////////////////////////// -->
+
+
+<img class ='img' src="/IMG/EJE3.png" alt="">
+<br>
+    <h1 id ='resultado'> </h1>
+
+    <script>
+    var a = 7;
+    var b = 8;
+    var z = a + b;
+    document.getElementById('resultado').innerHTML = "El resultado de a + b es = " + z;
+    </script>
+
+
+
+<br><br><hr><br><br>
+<!--///////////////////////////////////OTRO EJERCICIO/////////////////////////////////////// -->
+
+
+
+<button  onclick="tuma()" style="cursor: pointer;">Apreta aqui</button>
+<h1 id="titulaso"> Aqui cambiara</h1>
+
+
+
+<script>
+ var text='Hola Colores y cambios!'
+  function tuma(){
+    document.getElementById('titulaso').innerHTML= text;
+
+  }
+
+</script>
+
+
+
+
+
+<br><br><hr><br><br>
+<!--///////////////////////////////////OTRO EJERCICIO/////////////////////////////////////// -->
+
+<label>Choose a city
+  <select name="city" id="city">
+    <option value="Berlin">Berlin</option>
+    <option value="Tokyo">Tokio</option>
+    <option value="Rio">Rio</option>
+    <option value="Mumbai">Mumbai</option>
+    <option value="Cordoba">Cordoba</option>
+  </select>
+</label>
+
+<p> You selected: <span id="span1"></span></p>
+
+<script>
+  var select= document.getElementById("city");
+
+  select.addEventListener('change',function(){
+    var val = document.getElementById('city').value;
+  document.getElementById('span1').innerHTML = val;
+  });
+  
+</script>
+
+
+<br><br><hr><br><br>
+<!--///////////////////////////////////OTRO EJERCICIO/////////////////////////////////////// -->
+<button type="button" class="btn" onclick="btn();"> Change</button>
+<textarea  id="area" cols="30" rows="10">Type your mother fucker message</textarea>
+
+<script>
+function btn(){
+  document.getElementById('area').style.transition = '2s';
+  document.getElementById('area').style.boxShadow = 'black 5px 5px 50px';
+  
+
+}
+  var area = document.getElementById('area');
+
+area.addEventListener('focus', function(){
+  area.style.background = "Yellow";
+  area.style.color = 'Red'
+  
+});
+
+
+</script>
+
+
+
+
+<br><br><hr><br><br>
+<!--///////////////////////////////////OTRO EJERCICIO/////////////////////////////////////// -->
+
+
+
+
+
+
+
+
+
+<br><br><hr><br><br>
+<!--///////////////////////////////////OTRO EJERCICIO/////////////////////////////////////// -->
+
+
+
+
+
+
+
+
+
+
+<br><br><hr><br><br>
+<!--///////////////////////////////////OTRO EJERCICIO/////////////////////////////////////// -->
+
+
+
 </body>
 </html>

@@ -1,33 +1,47 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="/js.js"></script>
-    <link rel="stylesheet" href="/Style.css">
-    
-    <title>Document</title>
-    
+   <title> Try It Yourself </title>
+   <style type="text/css">
+      .dd {
+         position: relative;
+         display: inline-block;
+      }
+      .dd-btn {
+         padding: 15px;
+         text-align: center;
+         background: #173459;
+         border: none;
+         width: 1400px;
+         color: #f8f9f9;
+      }
+      .dd-content {
+         position: absolute;
+         width: 100%;
+         box-shadow: 0 18px 36px rgba(0,0,0,0.30), 0 14px 11px rgba(0,0,0,0.22);
+         height: 0px;
+         transition: height 2s;
+         overflow: hidden;
+      }
+      .dd:hover > .dd-content {
+         height: 1350px;
+      }
+      .dd-content > a {
+         display: block;
+         padding: 15px;
+         text-decoration: none;
+         color: black;
+      }
+   </style>
 </head>
-
 <body>
-    <img class='plant' src="/IMG/plant.png" alt="">
-<br><br><br><br><br>
-    <img class ='img' src="/IMG/EJS.png" alt="">
-
-    <h1 id ='resultado'> </h1>
-
-    <script>
-    var a = 7;
-    var b = 8;
-    var z = a + b;
-    document.getElementById('resultado').innerHTML = "El resultado de a + b es = " + z;
-    </script>
-
-    
-    
-    
-
+   <div class="dd">
+      <button class="dd-btn"> Hover or Tap me! </button>
+      <div class="dd-content">
+         <a href="#"> Home </a>
+         <a href="#"> About </a>
+         <a href="#"> Articles </a>
+      </div>
+   </div>
 </body>
 </html>

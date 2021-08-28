@@ -7,51 +7,67 @@
     <script src="js.js"></script>
     <link rel="stylesheet" href="Style.css">
     
-    <link rel="shortcut icon" href="IMG/Planet.png">
-    <title>Document</title>
+    <link rel="shortcut icon" href="/IMG/JSicon.png">
+    <title>Java-Script</title>
+
 </head>
 
 <body>
-                <!-- IMG -->
-    <img class='plant' src="IMG/plant.png" alt="">
-    <!-- <img class="nave" src="IMG/nave2.png" alt="" > -->
-
-               <!-- Buttons -->
-<br><br>
-               <h1>Inhaltsverzeichnis</h1>
-<br>
-      <form action="jsExercice/JS0.html">
+  <div class="header">
+   <a href="index.html"><img  id='logo' src="/IMG/javacorn.png" alt=""> </a> 
+   
+  </div>
+ 
+     
+<br><br><br>
+      <form action="jsExercice/JS1.html">
         <button class="btn">Onclik-Datee</button></form>
   
-        <form action="jsExercice/JS1.html">
-        <button class="btn">Onclik-Suma (+)</button></form>
-  
         <form action="jsExercice/JS2.html">
-        <button class="btn"></button></form>
+        <button class="btn">Clear</button></form>
   
         <form action="jsExercice/JS3.html">
-        <button class="btn"></button></form>
+        <button class="btn">Clear</button></form>
   
-        <form action="jsExercice/JS4.html">
-        <button class="btn"></button></form>
-  
-        <form action="jsExercice/JS5.html">
-        <button class="btn"></button></form>
-  
-        <form action="jsExercice/JS6.html">
-        <button class="btn"></button></form>
+    
 
-        
+        <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
+       
+<div class="footer">
+  <a href=""> <img src="" alt=""> </a>
+</div> 
 
 
 
-        <div id="pie">2016 &copy; Turacataca </div>
 
-        <script>
-          var a = 7;
-          var b = 8;
-          var z = a + b;
-          
-        </script>
+
+<script>
+var mybutton = document.getElementById("myBtn");
+
+// When the user scrolls down 20px from the top of the document, show the button
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    mybutton.style.display = "block";
+    console.log("workinng");
+  } else {
+    mybutton.style.display = "none";
+    console.log("not workinng");
+  }
+}
+
+// When the user clicks on the button, scroll to the top of the document
+function topFunction() {
+  document.body.scrollTop = 0;
+  document.documentElement.scrollTop = 0;
+}
+
+</script>
+
+
+
+
+
 </body>
 </html>

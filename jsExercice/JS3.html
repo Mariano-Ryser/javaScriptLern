@@ -7,20 +7,146 @@
     <script src="/js.js"></script>
     <link rel="stylesheet" href="/Style.css">
     
-    <title>Document</title>
+    <link rel="shortcut icon" href="/IMG/JSicon.png">
+    <title>Java-Script</title>
     
 </head>
 
 <body>
-    <img class='plant' src="/IMG/plant.png" alt="">
-<br><br><br><br>
-  <h1> onclick="getElementById('date').innerHTML= (7+6);">Click me</h1>
-
-<button id ='btn' onclick="getElementById('date').innerHTML= (7+6);">Click me</button>
+  <body>
+    <div class="header">
+     <a href="index.html"><img  id='logo' src="/IMG/javacorn.png" alt=""> </a> 
+     
+    </div>
+   
 <br><br><br>
-<div style="border: solid black 4px; display: inline-block;">
-<p id="date">id = 'date'</p>
+<!--///////////////////////////////////1er EJERCICIO/////////////////////////////////////// -->
+<h1> Button mit onclick Function </h1>
+<br>
+
+<img class= "img" src="/IMG/EJE1.png" alt="">
+
+<br>
+
+<div>
+  <button class = 'btn' onclick="S_templateStrings1();">Run</button>
+  <button class = 'btn' onclick="clearResultText(1);">Clear</button>
+  <br><br>
+
+  <div class="resultado"><p id="result-text-1" class="result-text">&nbsp;</p></div>
 </div>
+
+<script>
+function S_templateStrings1() {
+
+    let firstName = "Petra";
+    let lastName = "Grimes";
+    
+    let intro = `Let's introduce ${firstName} ${lastName} "officially"!`;
+
+    console.log(intro);  
+   
+    setInnerHTML("#result-text-1", intro);
+}
+
+function setInnerHTML(selector, text) {
+    let elem = document.body.querySelector(selector);
+    if (elem) elem.innerHTML = text;
+}
+
+function clearResultText(n) {
+    setInnerHTML("#result-text-" + n, '&nbsp;');
+}
+</script>
+
+<br><br>
+<HR></HR>
+<br><br>
+
+<!--///////////////////////////////////2do EJERCICIO/////////////////////////////////////// -->
+
+
+<br>
+  <h1> Onclick mathematical result </h1>
+<br><br>
+<img class='img'src="/IMG/EJE2.png" alt="">
+<br>
+<button id ='btn' onclick="getElementById('date').innerHTML= (7+6);">Click me</button>
+<br><br>
+<div display: inline-block;">
+  
+<p id="date">id = 'date'</p>
+<br><br>
+</div>
+
+<br><br><hr><br><br>
+<!--///////////////////////////////////3er EJERCICIO/////////////////////////////////////// -->
+
+
+<img class ='img' src="/IMG/EJE3.png" alt="">
+<br>
+    <h1 id ='resultado'> </h1>
+
+    <script>
+    var a = 7;
+    var b = 8;
+    var z = a + b;
+    document.getElementById('resultado').innerHTML = "El resultado de a + b es = " + z;
+    </script>
+
+
+
+<br><br><hr><br><br>
+<!--///////////////////////////////////OTRO EJERCICIO/////////////////////////////////////// -->
+
+
+
+
+
+
+<br><br><hr><br><br>
+<!--///////////////////////////////////OTRO EJERCICIO/////////////////////////////////////// -->
+
+
+
+
+
+<br><br><hr><br><br>
+<!--///////////////////////////////////OTRO EJERCICIO/////////////////////////////////////// -->
+
+
+
+
+
+
+
+<br><br><hr><br><br>
+<!--///////////////////////////////////OTRO EJERCICIO/////////////////////////////////////// -->
+
+
+
+
+
+
+
+
+
+<br><br><hr><br><br>
+<!--///////////////////////////////////OTRO EJERCICIO/////////////////////////////////////// -->
+
+
+
+
+
+
+
+
+
+
+<br><br><hr><br><br>
+<!--///////////////////////////////////OTRO EJERCICIO/////////////////////////////////////// -->
+
+
 
 </body>
 </html>

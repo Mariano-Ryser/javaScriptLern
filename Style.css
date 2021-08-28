@@ -1,99 +1,108 @@
-* {
+* { 
     margin: 0;
     padding: 0;
-    font-size: 40px;
+    font-size: 30px;
     color: rgb(0, 0, 0);
-    text-shadow: rgb(117, 117, 117) 2px 2px 10px;
+    text-shadow: rgb(88, 144, 149) 2px 2px 10px;
 }
-	body {align-items: center;
-          text-align: center;
-          background-color: rgb(197, 186, 82);
+	body {  
+          
+          background-color: rgb(75, 154, 165);
+          margin-left: 40px;
           margin-bottom: 200px;
-   animation-name: cuerpo;
-   animation-duration: 20s;
-   animation-iteration-count:infinite;
-   animation-direction: alternate; 
+          animation-name: cuerpo;
+          animation-duration: 10s;
+          animation-iteration-count:infinite;
+          animation-direction: alternate;
+          height: 2000px;
 }
-@keyframes cuerpo { 
-    0% {background:rgb(76, 112, 148);}
-    50% {background:rgb(100, 153, 47);}
-    100% {background:rgb(134, 64, 64);}} 
 
-    .img{border: solid rgb(160, 10, 10) 10px;}
+.header{
+  
+height:190px;
+width:100%;
+text-align: center;
+background-color: rgb(85,164,180);
+box-shadow: rgb(14, 13, 13) 10px 10px 60px;}
 
-.btn {background-color: rgb(41, 106, 122);
-    position: relative;
-      margin-top: 3%;
+
+#logo { position: absolute;
+  padding:0px 0px 0px 5px;
+  height: 200px;
+  animation-name: logo;
+  animation-duration: 2s; 
+  animation-iteration-count:infinite;
+  animation-direction: alternate;
+  animation-timing-function: ease-in-out;
+ 
+ }
+  @keyframes logo{ 
+  0%{transform: rotate(12deg);
+     left: 18px;}
+
+  100%{transform: rotate(8deg);
+       left: 35px;}} 
+
+/* Imagen de screenshot */
+
+.img{
+     border: solid rgb(255, 255, 255) 10px;
+     transition: 0.5s;}
+
+.img:hover{border: solid rgb(40, 61, 184) 10px;
+           box-shadow: black 5px 5px 50px;
+          }
+p {display: inline-block;}
+
+.btn {
+      background-color: rgb(41, 106, 122);
+      position: relative;
+      margin: 20px;
       height: 80px;
-      width: 800px;
-      border: solid black 3px;
-      box-shadow: rgb(56, 55, 55) 3px 3px 40px;
+      width: 400px;
+      border: solid rgb(235, 235, 235) 0px;
+      box-shadow:rgb(24, 24, 24) 6px 6px 15px;
       cursor: pointer;
-       transition: ease-out 3s; 
-      color: rgb(0, 0, 0);
-      /* animation-name: btna; 
-      animation-duration: 2s; 
-      animation-iteration-count:infinite;
-      animation-direction: alternate; */
-      transition: all 0.3s;
-      /* transition: width 3s; */
-    }
-    .btn:hover{background-color: rgb(21, 99, 119);
-      /* transition: all 0.3s; */
-      border-radius: 0% 10% 0% 20%;
-      box-shadow: rgb(206, 186, 186) 3px 3px 70px;
-      text-shadow: black 1px 1px 10px;
-      color: white;
-      /* width: 450px; */
-    }
-#btn {background-color: rgb(41, 106, 122);
-  position: relative;
-    margin-top: 3%;
-    height: 80px;
-    width: 800px;
-    border: solid black 3px;
-    box-shadow: rgb(56, 55, 55) 3px 3px 40px;
-    cursor: pointer;
-     transition: ease-out 3s; 
-    color: rgb(0, 0, 0);
-    /* animation-name: btna; 
-    animation-duration: 2s; 
-    animation-iteration-count:infinite;
-    animation-direction: alternate; */
-    transition: all 0.3s;
-    /* transition: width 3s; */
-}
+      color: rgb(255, 255, 255);
+      transition: all 0.3s;}
 
-#btn:hover{background-color: rgb(21, 99, 119);
-  /* transition: all 0.3s; */
-  border-radius: 0% 10% 0% 20%;
+    .btn:hover{
+      background-color: rgb(21, 99, 119);
+      box-shadow:rgb(56, 55, 55) 3px 3px 20px;
+      color: white;}
+
+#btn{background-color: rgb(41, 106, 122);
+     position: relative;
+     margin-top: 3%;
+     height: 60px;
+     width: 300px;
+     border: solid black 3px;
+     box-shadow: rgb(56, 55, 55) 3px 3px 40px;
+     cursor: pointer;
+     transition: ease-out 3s; 
+     color: rgb(0, 0, 0);
+     transition: all 0.3s;}
+
+#btn:hover{
+  background-color: rgb(21, 99, 119);
   box-shadow: rgb(206, 186, 186) 3px 3px 70px;
   text-shadow: black 1px 1px 10px;
-  color: white;
-  /* width: 450px; */;
-
-  }
+  color: white;}
 
 
+  
 
-
-
-
-
-
-
-
-  #pie {
-    height:70px;
+  .footer {
+    height: 100px;
     line-height:50px;
-    background:black;
+    background:rgb(85,164,180);
+    box-shadow: rgb(90, 90, 90) -4px -4px 40px;
     color:white;
     text-align:center;
     position:fixed;
     bottom:0;
     left:0;
-    width:100%;
-  }
+    width:100%;}
 
 
 
@@ -174,158 +183,28 @@
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/*///////////////NAVE ALIENIJENA ////////////////*/
-
-
-    .nave {
-    position: absolute;
-    left: 750px;
-    top: 600px;
-    transition: 0.4s;
-    border-radius: 50%; 
-    animation-name: nave2;
-    animation-duration: 20s; 
-     animation-iteration-count:infinite;
-     animation-direction: alternate;
-   } 
-   @keyframes nave2 { 
-    0%{left: 0px; top: 0px;
-     }
-     10% {top: 100px;}   
+    #myBtn {
+      display: none; /* Hidden by default */
+      position: fixed; /* Fixed/sticky position */
+      bottom: 50px; /* Place the button at the bottom of the page */
+      right: 30px; /* Place the button 30px from the right */
+      z-index: 4; /* Make sure it does not overlap */
+      border: none; /* Remove borders */
+      outline: none; /* Remove outline */
+      background-color: rgb(85, 122, 143); /* Set a background color */
+      color: rgb(255, 255, 255); /* Text color */
+      font-size: 25px;/* Increase font size */
+      cursor: pointer; /* Add a mouse pointer on hover */
+      padding: 17px; /* Some padding */
+      border-radius: 55%; /* Rounded corners */ 
+      box-shadow: black 6px 6px 20px;
+      opacity: 50%;
+      transition: 0.5s;
+    }
+        #myBtn:hover {
+          background-color: #173a7c; /* light green while hovering the mouse */
+          opacity: 100%;
+          box-shadow: black 6px 6px 30px;
+        }
       
-    20% { left: 150px;}
-    
-    30% { top: 400px; }
-    
-    40%{
-      left:1300px;
-      }
-      50%{left: 1000px; top: 300px; opacity: 0%;
-      }
-      60% {top: 350px; right: 50px; opacity: 0%;}   
-      
-     70% { left: 150px;opacity: 0%;}
      
-     80% { top: 400px; opacity: 100%;}
-
-     90% { top: 700px; opacity: 0%;}
-
-     100%{
-       left:100px;opacity: 100%;
-       }
-    }
-    
-/*///////////////Plant ////////////////*/
-
-.plant {
-    position: absolute;
-    top: -10px;
-    left: 0px;
-    animation-name: plant1;
-    animation-duration: 3s; 
-     animation-iteration-count:infinite;
-     animation-direction: alternate;
-     z-index: -1;
-
-
-}
-@keyframes plant1 { 
-    0%{transform: rotate(20deg);}
- 
-     100%{left: 50px; top: -40px;
-        transform: rotate(1deg);
-       }
-    }
-    
