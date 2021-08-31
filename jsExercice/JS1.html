@@ -5,20 +5,32 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="/js.js"></script>
+
     <link rel="stylesheet" href="/Style.css">
-    
     <link rel="shortcut icon" href="/IMG/JSicon.png">
     <title>Java-Script</title>
+
+
+    
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
     
 </head>
 
-<body>
+
   <body>
     <div class="header">
-     <a href="index.html"><img  id='logo' src="/IMG/javacorn.png" alt=""> </a> 
+     <a href="/index.html"> <img  id='logo' src="/IMG/javacorn.png" alt=""> </a> 
      
     </div>
    
+
+
+
+
+
+
 <br><br><br>
 <!--///////////////////////////////////1er EJERCICIO/////////////////////////////////////// -->
 <h1> Button mit onclick Function </h1>
@@ -34,7 +46,8 @@
   <button class = 'btn' onclick="clearResultText(1);">Clear</button>
   <br><br>
 
-  <div class="resultado"><p id="result-text-1" class="result-text">&nbsp;</p></div>
+  <p id="result-text-1" class="result-text">&nbsp;</p></div>
+
 </div>
 
 <script>
@@ -100,20 +113,21 @@ function clearResultText(n) {
 <br><br><hr><br><br>
 <!--///////////////////////////////////OTRO EJERCICIO/////////////////////////////////////// -->
 
-
-
+<img class ='img' src="/IMG/EJE4.png" alt="">
+<br><br><br>
 <button  onclick="tuma()" style="cursor: pointer;">Apreta aqui</button>
 <h1 id="titulaso"> Aqui cambiara</h1>
 
-
-
 <script>
  var text='Hola Colores y cambios!'
+ var tumama = document.getElementById('titulaso')
+
   function tuma(){
-    document.getElementById('titulaso').innerHTML= text;
-
+    tumama.innerHTML= text;
+    tumama.style.transition = '2s'
+    tumama.style.color='red'
+    tumama.style.fontSize = '50px'
   }
-
 </script>
 
 
@@ -122,6 +136,9 @@ function clearResultText(n) {
 
 <br><br><hr><br><br>
 <!--///////////////////////////////////OTRO EJERCICIO/////////////////////////////////////// -->
+
+<img class ='img' src="/IMG/EJE5.png" alt="">
+<br><br><br>
 
 <label>Choose a city
   <select name="city" id="city">
@@ -148,22 +165,32 @@ function clearResultText(n) {
 
 <br><br><hr><br><br>
 <!--///////////////////////////////////OTRO EJERCICIO/////////////////////////////////////// -->
-<button type="button" class="btn" onclick="btn();"> Change</button>
-<textarea  id="area" cols="30" rows="10">Type your mother fucker message</textarea>
+<img class ='img' src="/IMG/EJE6.png" alt="">
+<br><br><br>
+
+<button type="button" class="btn" onclick="btn()"> Change</button>
+<br>
+<h1 style ='text-align: center; font-size: 50px; opacity: 0%;'  id='linux'></h1>
+<textarea  style ='margin: 20px' id="area" cols="70" rows="10"></textarea>
 
 <script>
-function btn(){
-  document.getElementById('area').style.transition = '2s';
-  document.getElementById('area').style.boxShadow = 'black 5px 5px 50px';
-  
-
-}
+  var linux = document.getElementById('linux');
   var area = document.getElementById('area');
 
+function btn(){
+  linux.style.transition = '5s'
+  linux.style.opacity = '100%'
+  linux.innerHTML = 'Linux Terminal Starting'
+  area.style.transition = '2s';
+  area.style.boxShadow = 'black 10px 10px 80px';
+  area.style.border = 'black solid 10px';
+  area.style.margin = '80px';
+  }
 area.addEventListener('focus', function(){
-  area.style.background = "Yellow";
-  area.style.color = 'Red'
-  
+  area.style.transition = '2s';
+  area.style.background = "black";
+  area.style.color = 'rgb(132, 207, 58)'
+  area.innerHTML = 'oppdev2021@oppdev-latitude-3510:~$' 
 });
 
 
@@ -171,6 +198,256 @@ area.addEventListener('focus', function(){
 
 
 
+<br><br><hr><br><br>
+<!--///////////////////////////////////OTRO EJERCICIO/////////////////////////////////////// -->
+<img class ='img' src="/IMG/eje7.png" alt="">
+<br><br><br>
+
+<ul id="text"></ul>
+
+   <script>
+      var html = "";
+      for(var i = 0; i < 10; i++) {
+         if(i == 5) {
+            break;
+         }
+
+         html += "<li>Number " + i + "</li>"; // add string to html
+      }
+      
+      document.getElementById("text").innerHTML = html;
+   </script>
+
+<br><br><hr><br><br>
+<!--///////////////////////////////////OTRO EJERCICIO/////////////////////////////////////// -->
+<img class ='img' src="/IMG/EJE8.png" alt="">
+<br><br><br><br>
+
+<label> Choose a fruit
+  <select id="fruits" onchange="checkPrice()">
+     <option value="apple"> apple </option>
+     <option value="banana"> banana </option>
+     <option value="cherry"> cherry </option>
+     <option value="mango"> mango </option>
+     <option value="Weed"> weed </option>
+     <option value="strawberry"> strawberry </option>
+  </select>
+</label>
+<p id="price"></p>
+
+<script>
+  function checkPrice() {
+     var fruit = document.getElementById("fruits").value;
+     var price = document.getElementById("price")
+     switch(fruit) {
+         case "apple":
+             var amount = "$1.92"
+             price.innerHTML = "The price of " + fruit + " is " + amount;
+             break;
+         case "banana":
+             var amount = "$2.32"
+             price.innerHTML = "The price of " + fruit + " is " + amount;
+             break;
+         case "mango":
+             var amount = "$3.11"
+             price.innerHTML = "The price of " + fruit + " is " + amount;
+             break;
+         case "Weed":
+             var amount = "$10.20 "
+             price.innerHTML = "The price of " + fruit + " is " + amount + "per Gram and now come the Police, we caught you!";
+             break;
+         default:
+         price.innerHTML = "Sorry for the inconveniences, " + fruit + " is currently not available.";
+     }
+  }
+</script>
+
+
+
+
+
+<br><br><hr><br><br>
+<!--///////////////////////////////////OTRO EJERCICIO/////////////////////////////////////// -->
+
+<img class ='img' src="/IMG/EJE9.png" alt="">
+<br><br><br><br>
+
+
+
+<div class = 'boxfinale' onclick="changeColor(this)" style="background-color: red;">
+  TOCAME Y CAMBIARE DE COLOR!
+</div>
+
+<script>
+  function changeColor(element) {
+     var currentColor = element.style.backgroundColor;
+     if(currentColor == "red") {
+        element.style.backgroundColor = "green";
+
+
+     } else {
+        element.style.backgroundColor = "red"; 
+     }
+  }
+</script>
+
+
+
+
+
+
+<br><br><hr><br><br>
+<!--///////////////////////////////////OTRO EJERCICIO/////////////////////////////////////// -->
+<img class ='img' src="/IMG/EJE10.png" alt="">
+<br><br><br><br>
+
+
+<p id="time">10</p>
+   <button onclick="stopInterval()"> Stop Interval </button>
+
+   <script>
+      var x = 10;
+      
+      var myInterval = setInterval(function() {
+         // adds 10 to x
+         x += 10;
+         document.getElementById("time").innerHTML = x;
+      }, 100);
+      
+      function stopInterval() {
+         clearInterval(myInterval);
+      }
+
+   </script>
+
+
+<br><br><hr><br><br>
+<!--///////////////////////////////////OTRO EJERCICIO/////////////////////////////////////// -->
+
+
+<button onclick="yes()">Send</button>
+<br>
+<button onclick="clearResultTex(2)">Clear</button>
+<h1 id="titulo2"></h1>
+
+<script>
+function yes (){
+
+var ti = document.getElementById('titulo2')
+
+  var myTimeout = setTimeout(function() {
+    ti.innerHTML = "Woww! <br>"
+  },1)
+
+  var myTimeout = setTimeout(function() {
+    ti.innerHTML += "Hallo "
+  },500)
+
+  var myTimeout = setTimeout(function() {
+    ti.innerHTML += "Wie "
+  },1000)
+
+  var myTimeout = setTimeout(function() {
+    
+    ti.innerHTML += "geht es dir? !! <br> "
+  },1500)
+
+  var myTimeout = setTimeout(function() {
+    
+    ti.innerHTML += "alles okey?? <br> "
+  },2000)
+
+  var myTimeout = setTimeout(function() {
+    
+    ti.innerHTML += "nein, viel stress <br> "
+  },2400)
+
+  var myTimeout = setTimeout(function() {
+    ti.style.transition = '2s'
+    ti.style.color = "green "
+    ti.style.fontSize = "100px"
+    
+  },2500)
+
+  var myTimeout = setTimeout(function() {
+    ti.style.transition = '2s'
+    ti.style.color = "yellow "
+    ti.style.fontSize = "20px"
+    
+  },3400)
+
+  var myTimeout = setTimeout(function() {
+    ti.style.transition = '4s'
+    ti.style.color = "black "
+    ti.style.fontSize = "100px"
+    
+  },4000)
+ 
+   
+}
+
+function setInnerHTML(selector, text) {
+    let elem = document.body.querySelector(selector);
+    if (elem) elem.innerHTML = text;
+}
+
+function clearResultTex(n) {
+    setInnerHTML("#titulo" + n, '&nbsp;');
+}
+</script>
+
+
+
+<br><br><hr><br><br>
+<!--///////////////////////////////////OTRO EJERCICIO/////////////////////////////////////// -->
+
+
+
+<p id='obj1'></p>
+<br><br><br>
+<p id='obj2'></p>
+
+<script>
+
+const person = {
+  firstName:'Mariano',
+  lastName: 'Ryser',
+  age:30,
+  fullname: function(){return "Er heisst " + this.firstName + " " + this.lastName + " " + 'und ist toll'},
+
+  allergies: {
+    allergie1:'cacao',
+    allergie2:'hund',
+    allergie3:'cat',
+    istMarried:false,
+  }
+};
+
+
+console.log(person.fullname().toUpperCase())
+console.log(person.fullname().toLowerCase())
+console.log(person.lastName.length)
+console.log(person.allergies.allergie1)
+
+
+
+document.getElementById('obj1').innerHTML = 
+person['firstName'] + '<br>' +
+person['lastName'] + '<br>' +
+person.allergies.allergie1.toUpperCase() + '<br>' +
+person.fullname().toUpperCase();
+
+document.getElementById('obj2').innerHTML = person.lastName;
+document.getElementById('obj2').style.color = 'Red';
+document.getElementById('obj2').style.fontSize = '70px';
+document.getElementById('obj2').innerHTML += ' ' + person.firstName;
+
+</script>
+
+
+
+<a href="/JS2.html">HERE NEXT SEITE</a>
+
 
 <br><br><hr><br><br>
 <!--///////////////////////////////////OTRO EJERCICIO/////////////////////////////////////// -->
@@ -183,6 +460,12 @@ area.addEventListener('focus', function(){
 
 
 
+
+
+
+
+
+
 <br><br><hr><br><br>
 <!--///////////////////////////////////OTRO EJERCICIO/////////////////////////////////////// -->
 
@@ -195,10 +478,15 @@ area.addEventListener('focus', function(){
 
 
 
+
+
+
+
+
+
+
+
 <br><br><hr><br><br>
 <!--///////////////////////////////////OTRO EJERCICIO/////////////////////////////////////// -->
-
-
-
 </body>
 </html>
