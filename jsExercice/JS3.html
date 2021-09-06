@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/Style.css">
+    <link rel="shortcut icon" href="/IMG/JSicon.png">
+
+    <title>Java-Script</title>
+ 
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
+
+<!--------------VUE LINK----------------->
+<script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script> 
+</head>
+<body>
+        
+    <!-------------- HEADER ----------------->
+    <div class="header">
+     <a href="/index.html"> <img  id='logo' src="/IMG/javacorn.png" alt=""> </a> 
+     <h1 style="font-size: 100px;"> VUE JS</h1>
+    </div>
+     <br><br>
+   
+    <!-------------- App ----------------->
+
+<div id='app'>
+  <h1>{{Titulo}}</h1>
+     
+   <form v-on:submit.prevent = "addItem">
+    <input type="text" name="title" v-model='itemTitle'>
+
+    <button type="submit" >Add</button>
+  </form>
+
+  <ul v-for = "item in toDoItems">
+    <li>   
+       {{item.title}}
+    </li>
+  </ul> 
+
+  <button v-on:click="addOne"> Add one</button>
+  <p>Button has been clicked {{ counter }} times</p>
+  
+  <button v-on:click ="addAlert">AlertFunction </button>
+
+</div>
+
+
+<script>
+
+   var app = new Vue ({
+    el: '#app',
+    data: { //data for the el --> #app
+      
+      counter: 0,
+
+      Titulo: " Mariano Ryser",
+
+      itemTitle:"",
+
+      toDoItems:[
+      {title: "Estudio",
+       isCompleted: false },
+
+       {title: "Finalidad",
+       isCompleted: false },
+
+       {title: "desconcierto",
+       isCompleted: false },
+      ] // bis toDoItems
+
+    },  // bis data
+   
+    methods: { // object functions go here
+      
+      addAlert(){ alert('Hallo' + `${this.Titulo}`)}, // Hallo Mariano 
+
+      addOne()   {this.counter += 1; 
+        console.log('addOne()')},
+
+      addItem(){ 
+         this.toDoItems.push({
+             title: this.itemTitle,
+             isCompleted: false
+           })
+
+      //  this.itemTitle= "";
+
+      } // bis addItem()
+    }   // bis methods:
+  })    // bis New Vue
+</script> 
+
+</body>
+</html>
