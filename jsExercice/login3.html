@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+        opacity: 100%;
+        /* background-image: url(/IMG/dalmata2.jpg); */
+        background: #d4d4d4; 
+        display: flex;
+        align-content: center;
+        align-items: center;
+        text-align: center;
+        justify-content: center;
+       }
+       h2 {
+    color: rgb(148, 148, 148);
+    display: inline-block;
+    font-size: 0.8em;
+    line-height: 0px;
+    font-weight: bold;
+     margin: 15px;
+}
+        .app-1{
+         border: solid rgb(231, 230, 230) 0.1px;   /* el border box no tolera menor a 1px -- degradar el color! */
+        margin: 40px;
+        width: 350px;
+        height: 250px;
+        padding-top: 40px;
+        background: rgb(241, 241, 241);
+        color: #082f62;
+        border-radius:0.1%;
+        box-shadow: rgb(219, 219, 219) 5px 5px  70px;
+        transition: 1s;
+      }
+
+      input {
+    -webkit-writing-mode: horizontal-tb !important;
+    text-rendering: auto;
+    color: -internal-light-dark(rgb(0, 0, 0), white);
+    letter-spacing: normal;
+    word-spacing: normal;
+    text-transform: none;
+    text-indent: 0px;
+    text-shadow: rgb(255, 250, 186) 0px 0px 10px;
+    display: inline-block;
+    text-align: start;
+    appearance: auto;
+    background-color: (rgb(7, 7, 7));
+    -webkit-rtl-ordering: logical;
+    cursor: text;
+    margin: 0em;
+    font: 400 13.3333px Arial;
+    padding: 1px 2px;
+    border-width: 1px;
+    border-style: inset;
+    border-color: rgb(165, 36, 36) 1px;
+    border-image: initial;
+   
+}
+
+
+      .boton {
+        text-shadow: none;
+        cursor: pointer;
+        height: 40px;
+        margin-top: 15px; 
+        background-color: #2b79df;
+        color: white;
+        border: none;
+        border-radius: 2px;
+        font-size: 10px;
+        font-weight: bold;
+        line-height: 20px;
+        padding: 0 16px;
+        transition: 200ms;
+        -webkit-transition: 200ms;
+        -moz-transition: 200ms;
+        -ms-transition: 200ms;
+        -o-transition: 200ms;
+      }
+            .boton:hover {
+        background-color: #3589f8;
+            }
+      
+      </style>
+      </head>
+      
+      <body>
+      
+       <div class="app-1">
+       
+      <form name="login"> 
+           <table> 
+             <h2>User</h2><br>
+               
+                 <input name="usuario" type="text" class="Input" value="" size="20" /> <br>
+      
+               <h2>Password</h2><br>
+               
+                 <input name="password" type="password" class="Input" value="" size="20" /> <br>
+      
+                 <input value="Entrar" target="_parent" onclick="Login()" type="button" class="boton"/><br> 
+      
+                 <!-- <input type="reset" name="Borrar" id="Borrar" value="Reset" class="boton" />   -->
+      </form> 
+      </div> 
+      
+      <script> 
+      
+      function Login(){ 
+      var done=0; 
+      var usuario = document.login.usuario.value; 
+      var password = document.login.password.value; 
+      
+      if (usuario =="USUARIO1" && password=="pass") { 
+      window.location="/index.html";
+      } 
+      if (usuario=="USUARIO2" && password=="CONTRASEÑA2") { 
+      window.location="TU_PAGINA_WEB.HTML"; 
+      } 
+      
+      if (usuario=="" && password=="") { 
+      alert ("Porfavor llene los campos necesarios"); 
+      } 
+      } 
+              </script> 
+      
+      <script> 
+
+    //   document.oncontextmenu = function(){return false}  desabilita el click derecho del mouse
+    
+      </script>
+      </body>
+      </html>
